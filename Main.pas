@@ -225,13 +225,9 @@ var
   Options: TIniFile;
 begin
   Options := TIniFile.Create(ExtractFilePath(ParamStr(0)) + 'Setup.ini');
-//  PathCovidService:= Options.ReadString('OptionConnect', 'PathCovidService', 'https://ips-test.rosminzdrav.ru/17289a0c30063');
-//  PathCovidService:= Options.ReadString('OptionConnect', 'PathCovidService', 'https://ips.test.egisz.rosminzdrav.ru/59f96aefd67a4');
   PathCovidService:= Options.ReadString('OptionConnect', 'PathCovidService', 'https://ips.egisz.rosminzdrav.ru/8e05a39d5d5c9');
-//PathCovidService:= Options.ReadString('OptionConnect', 'PathCovidService', 'https://ips.test.egisz.rosminzdrav.ru/e3a59058d76ee');
   SerNumberCovid:=Options.ReadString('OptionConnect', 'SerNumberCovid', '10');
-//  IdentIS:=Options.ReadString('OptionConnect', 'IdentIS', 'be7323a6-2635-416f-b6b3-97dd9a9dda4c');
-  IdentIS:=Options.ReadString('OptionConnect', 'IdentIS', '9f5e78db-de97-4f5b-964a-791786734749');
+  IdentIS:=Options.ReadString('OptionConnect', 'IdentIS', '');
   PathToKey1:=Options.ReadString('OptionConnect', 'PathToKey1', 'Keys/Key1.cer');
   PathToKey2:=Options.ReadString('OptionConnect', 'PathToKey2', 'Keys/Key2.cer');
   FreeAndNil(Options);
